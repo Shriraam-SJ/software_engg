@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center">Dashboard</h1>
+    <p class="text-center">Your balance is: ₹{{ balance }}</p>
+
+    <div class="row justify-content-center mt-4">
+      <div class="col-md-4">
+        <!-- Updated Links -->
+        <a href="{{ url_for('debit_page') }}" class="btn btn-danger w-100">Debit</a>
+        <a href="{{ url_for('credit_page') }}" class="btn btn-success w-100 mt-2">Credit</a>
+        <a href="{{ url_for('netbanking_page') }}" class="btn btn-info w-100 mt-2">Net Banking</a>
+        <a href="{{ url_for('upi_page') }}" class="btn btn-primary w-100 mt-2">UPI</a>
+        <a href="{{ url_for('transaction_history') }}" class="btn btn-secondary w-100 mt-2">Transaction History</a>
+        <a href="{{ url_for('logout') }}" class="btn btn-warning w-100 mt-2">Logout</a>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
